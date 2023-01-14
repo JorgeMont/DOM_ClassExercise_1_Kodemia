@@ -18,6 +18,12 @@ infoPersonajes.forEach((personaje) => {
   const elementoLista = document.createElement("li");
   const card = document.createElement("div");
   const cardBody = document.createElement("div");
+  const cardList = document.createElement('ul');
+  const nameElem = document.createElement('li');
+  const statusElem = document.createElement('li');
+  const speciesElem = document.createElement('li');
+  const typeElem = document.createElement('li');
+  const genderElem = document.createElement('li');
   const cardImage = document.createElement("img");
 
   //Agregando clases a los divs
@@ -28,9 +34,23 @@ infoPersonajes.forEach((personaje) => {
   //Ordenando los elementos
   card.appendChild(cardBody);
   card.appendChild(cardImage);
+  cardBody.appendChild(cardList);
   elementoLista.appendChild(card);
 
-  cardBody.textContent = name;
+  //Asignando los valores
+  nameElem.textContent = `Name: ${name}`;
+  statusElem.textContent = `Status: ${status}`;
+  speciesElem.textContent = `Species: ${species}`;  
+  typeElem.textContent = `Type: ${type}`;
+  genderElem.textContent = `Gender:${gender}`;
   cardImage.src = image;
+
+  //Agregando los elementos al Card
   listaPersonajes.appendChild(elementoLista);
+  cardList.appendChild(nameElem);
+  cardList.appendChild(statusElem);
+  cardList.appendChild(speciesElem);
+  cardList.appendChild(typeElem);
+  cardList.appendChild(genderElem);
+  
 });
