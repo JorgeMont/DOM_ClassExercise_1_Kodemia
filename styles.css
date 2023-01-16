@@ -1,15 +1,38 @@
 body{
     padding: 1rem;
+    margin: 0 auto;
 }
 
 h1{
     text-align: center;
 }
 
-.card-img-top{
-    width: 10rem;
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    width: 60rem;
+}
+.card{
+    margin: 2rem auto;
+    width: 15rem;
 }
 
-ul{
-    list-style: none;
+.card img{
+    width: 100%;
+}
+
+p{
+    color: #34a4b0;
+    margin: 0;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.card-body{
+    background-color: #10124c;
+    border-radius: 0 0 5px 5px;
 }
